@@ -11,12 +11,14 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run: npm run lint
   test: #print_hello job
     docker:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run: npm run test
   analyze: #print_world job
     docker:
